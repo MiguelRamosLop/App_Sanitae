@@ -3,7 +3,7 @@
 }
 
 *{
-    --color_btn : #0066FF;
+    --color_items : #0066FF;
     margin:20;
     padding:20;
     box-sizing: border-box;
@@ -28,7 +28,7 @@
 .card_header {
     font-size: 1.5erm;
     margin-bottom: 1.5erm;
-    color:var(--color_btn);
+    color:var(--color_items);
 }
 
 .card_image {
@@ -60,15 +60,17 @@
 }
 
 .btn {
-    color:var(--color_btn);
+    color:var(--color_items);
     border: none;
     padding: .5em .75em;
     border-radius: .25rem;
     cursor: pointer;
+    text-decoration: underline;
+    display:inline-block;
 }
 
 .btn:hover, .btn:focus {
-    background-color: var(--color_btn);
+    background-color: var(--color_items);
     color: white;
 }
 
@@ -76,66 +78,47 @@
     margin-left: 0.5rem;
 }
 
-h1{
-    color:red;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-
-.full-page{
-    height:100%;
-    width:100%;
-    background-color: #f2f2f2;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-}
-
-.navbar{
-    display:flex;
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding:20px;
-    padding-left:50px;
-    padding-right:30px;
-    padding-top:50px;
+    background-color: white;
+    color: var(--color_items)
 }
 
-nav{
-    flex:1;
-    text-align: right;
+.brand_title {
+    margin: .5rem;
+    height: fit-content;
+    width: fit-content;
 }
 
-nav ul{
-    display:inline-block;
-    list-style:none;
+.nav_links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-nav ul li{
-    display:inline-block;
-    margin-right:70px;
+
+.nav_links li {
+    list-style: none;
 }
 
-nav ul li a{
-    text-decoration:none;
-    color:#0066FF;
-    font-size:20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.nav_links li a {
+    text-decoration: none;
+    color: var(--color_items);
+    padding: 3rem;
+    display: block;
 }
 
-nav ul li button {
-    
-    color:#0066FF;
-    font-size:20px;
-    border:none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 12px;
-    display: inline-block;
-    cursor: pointer;
-    width: 150px
-}
-
-nav ul li button:hover {
-    background-color: #0066FF;
-    color: white;
+.nav_links li:hover {
+    color: antiquewhite;
+    font-style: italic;
+    font-weight: bold;
 }
 
 
