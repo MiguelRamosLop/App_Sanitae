@@ -1,12 +1,85 @@
+*, *::before, *::after {
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    --color_btn : #0066FF;
+    margin:20;
+    padding:20;
+    box-sizing: border-box;
+}
+
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: flex-start;
+
+}
+
+.card {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #777;
+    border-radius: .25rem;
+    max-width: 300px;
+    overflow: hidden;
+
+}
+.card_header {
+    font-size: 1.5erm;
+    margin-bottom: 1.5erm;
+    color:var(--color_btn);
+}
+
+.card_image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.card_image > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    max-height: 200px;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+}
+
+.card:hover > .card_image > img {
+    transform: scale(1.025);
+ }
+
+.card_message {
+    font-size: 0.8rem;
+}
+
+.card_footer {
+    margin-top: 1rem;
+    font-size: 1.5erm;
+}
+
+.btn {
+    color:var(--color_btn);
+    border: none;
+    padding: .5em .75em;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--color_btn);
+    color: white;
+}
+
+.btn + .btn {
+    margin-left: 0.5rem;
+}
+
 h1{
     color:red;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
 
 .full-page{
     height:100%;
