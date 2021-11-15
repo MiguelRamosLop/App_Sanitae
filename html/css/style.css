@@ -88,7 +88,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    color: var(--color_items)
+    color: var(--color_items);
+    flex-wrap: wrap;
 }
 
 .brand_title {
@@ -117,9 +118,43 @@ body {
 
 .nav_links li:hover {
     color: antiquewhite;
-    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.button_navbar {
+    color:var(--color_items);
+    font-size: medium;
+    border:none;
+    display: inline-block;
+    cursor: pointer;
+    padding: .5em .75em;
+    border-radius: .25rem;
+    margin-top: 2.45em;
+}
+.button_navbar:hover {
+    background-color: var(--color_items);
+    color: white;
+}
+
+.login_form {
+    display: inline-block;
+    margin-top: 35mm;
+    margin-left: 125mm;
+}
+
+.login_form_title {
+    margin-bottom: 1.5erm;
+    color:var(--color_items);
     font-weight: bold;
 }
 
+.login_form_inputs {
+    margin-bottom: 1.5erm;
+    font-size:medium;
+}
 
-
+.principal_container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
