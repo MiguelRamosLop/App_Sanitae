@@ -2,6 +2,12 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+header {
+    text-align: right;
+    z-index: 999;
+    margin-right: 5mm;
+}
+
 *{
     --color_items : #0066FF;
     margin:20;
@@ -92,6 +98,11 @@ body {
     flex-wrap: wrap;
 }
 
+.nav a {
+    opacity: 1;
+    position: relative;
+}
+
 .brand_title {
     margin: .5rem;
     height: fit-content;
@@ -119,7 +130,6 @@ body {
 .nav_links li:hover {
     color: antiquewhite;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .button_navbar {
@@ -158,3 +168,21 @@ body {
     display: grid;
     grid-template-columns: 40% 60%;
 }
+
+.bigI_home {
+    display: block;
+    color:var(--color_items);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.eslogan_home {
+    display: block;
+    color:var(--color_items);
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+
