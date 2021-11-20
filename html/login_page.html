@@ -18,6 +18,13 @@
             </div>
             <div class="nav_links">
                 <ul>
+                    <li>
+                        <a href='#'>
+                            <form>
+                                <input type="text" name="search" class = "buscar" placeholder="      Buscar...">
+                            </form>
+                        </a>
+                    </li>
                     <li> <a href='#'> Inicio </a></li>
                     <li> <a href='#'> FAQs </a></li>
                     <li> <a href='#'> Campañas </a></li>
@@ -26,23 +33,22 @@
             </div>
         </nav>
     </header>
-    <div class = "full_page">
-        <div class = "login_form">
+    <section class = "login_bg_container">
+        <div class = "center">
+            <h1> Accede a tu Área Privada </h1>
             <form method="post">
-                <div class = "login_form_title">
-                    <h1> Inicia Sesión </h1>
-                </div>
-                <div class = "login_form_inputs">
+                <div class="text_field">
                     <input type="text" name="username" placeholder="Nombre de usuario">
+                </div>
+                <div class="text_field">
                     <input type="password" name="password" placeholder="Contraseña">
                 </div>
-                <div class = "login_form_buttons">
-                    <button type="submit" name="login"> Entrar </button>
-                    <button type="submit" name="register"> Regístrate Aquí </button>
-                </div>
+                <button type="submit" name="login" class="button_navbar"> Entrar </button>
+                <div class="registrate_link"> 
+                    ¿No tienes cuenta? <a href="#"> Regístrate Aquí </a></div>
             </form>
         </div>
-    </div>
+    </section>
     <footer>
         <div class="footer">
             <h3> Sanitae Foundation</h3>

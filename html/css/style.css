@@ -133,7 +133,8 @@ body {
 }
 
 .button_navbar {
-    color:var(--color_items);
+    background-color: var(--color_items);
+    color: white;
     font-size: medium;
     border:none;
     display: inline-block;
@@ -142,27 +143,38 @@ body {
     border-radius: .25rem;
     margin-top: 2.45em;
 }
+
+
 .button_navbar:hover {
     background-color: var(--color_items);
     color: white;
+    text-decoration: underline;
+    transition: 0.5s;
+    border-color: #0066FF;
 }
 
-.login_form {
-    display: inline-block;
-    margin-top: 35mm;
-    margin-left: 125mm;
+.buscar {
+    width: 130px;
+    box-sizing: content-box;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    border-bottom: 2px solid var(--color_items);
+    font-size: 16px;
+    background-color: white;
+    background-image: url(../resources/images/search_icon.JPG); 
+    background-repeat: no-repeat;
+    color: var(--color_items);
 }
 
-.login_form_title {
-    margin-bottom: 1.5erm;
-    color:var(--color_items);
+::placeholder { 
+    color: var(--color_items);
+}
+
+.buscar:hover {
+    color: antiquewhite;
     font-weight: bold;
 }
 
-.login_form_inputs {
-    margin-bottom: 1.5erm;
-    font-size:medium;
-}
 
 .grid_container_p{
     display: grid;
@@ -179,6 +191,7 @@ body {
     height: auto;
     text-align: center;
 }
+
 
 @media only screen and (max-width: 600px) {
     .caja_grid{
@@ -260,5 +273,67 @@ body {
     text-decoration: none;
 }
 
+.login_bg_container {
+    margin:0;
+    padding:0;
+    background-image: url(../resources/images/Login_bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.center {
+    position: absolute;
+    top: 30%;
+    left: 32%;
+}
+
+.center h1 {
+    text-align: center;
+    border-bottom: 1px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color_items);
+}
+
+.center form {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.text_field {
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.text_field input {
+    border: none;
+    border-bottom: 1px solid var(--color_items);
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight:lighter;
+    color: var(--color_items);
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.registrate_link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.registrate_link a {
+    text-decoration: none;
+    color: var(--color_items);
+}
+
+.registrate_link a:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
 
 
