@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand_title">
+               <img class= "image" src="resources/images/Logo_Sanitae.JPG" alt="Sanitae" width="270" height="100">
+            </div>
+            <div class="nav_links">
+                <ul>
+                    <li>
+                        <a href='#'>
+                            <form>
+                                <input type="text" name="search" class = "buscar" placeholder="      Buscar...">
+                            </form>
+                        </a>
+                    </li>
+                    <li> <a href='#'> Inicio </a></li>
+                    <li> <a href='#'> FAQs </a></li>
+                    <li> <a href='#'> Campañas </a></li>
+                    <li> <button class = "button_navbar"> Iniciar Sesion </button> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="signup_bg_container">
+        <div class="center">
+            <h1> Bienvenido a Sanitae </h1>
+            <form method="post">
+                <div class="text_field_nom_ape">
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <input type="password" name="apellidos" placeholder="Apellidos">
+                </div>
+                <div class="text_field">
+                    <input type="text" name="username" placeholder="Nombre de usuario">
+                </div>
+                <div class="text_field">
+                    <input type="text" name="telefono" placeholder="Teléfono">
+                </div>
+                <div class="text_field">
+                    <input type="password" name="password" placeholder="Contraseña">
+                </div>
+                <div class="text_field">
+                    <input type="password" name="password-repeated" placeholder="Repite contraseña">
+                </div>
+                <div class="text_field">
+                    <input type="text" name="nif" placeholder="NIF">
+                </div>
+                <div class="text_field">
+                    <input type="text" name="nacimiento" placeholder="Fecha de nacimiento (dd/mm/yyyy)">
+                </div> 
+                <div class="radio_button_signup">
+                    <p> Tipo de usuario: </p>
+                    <label class="rbtn">Particular
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="rbtn">Empresa
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                </div>
+                <div class="text_field">
+                    <button type="submit" name="login" class="button_navbar"> Continuar </button>
+                </div>
+                <div class="text_field">
+                    <a href="#" class="condiciones"> Revisar terminos y condiciones </a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

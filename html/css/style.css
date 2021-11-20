@@ -299,6 +299,7 @@ body {
 .center form {
     text-align: center;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .text_field {
@@ -307,6 +308,25 @@ body {
 }
 
 .text_field input {
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid var(--color_items);
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight:lighter;
+    color: var(--color_items);
+    padding: 0;
+    margin: 0;
+    width: 60%;
+}
+
+.text_field_nom_ape {
+    position: relative;
+    padding-bottom: 5%;
+}
+.text_field_nom_ape input {
+    display: inline-block;
     border: none;
     border-bottom: 1px solid var(--color_items);
     background-color: transparent;
@@ -317,8 +337,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
-
 
 .registrate_link {
     margin: 30px 0;
@@ -331,9 +349,43 @@ body {
     color: var(--color_items);
 }
 
+.condiciones {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color_items);
+}
+
+.condiciones:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
 .registrate_link a:hover {
     text-decoration: underline;
     transition: 0.5s;
 }
 
+.signup_bg_container {
+    margin: 0;
+    padding: 0;
+    background-image: url(../resources/images/Registro_bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
 
+.rbtn {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding-left: 50px;
+}
+
+.radio_button_signup {
+    color: var(--color_items);
+    display: inline-block;
+    align-items: left;
+}
