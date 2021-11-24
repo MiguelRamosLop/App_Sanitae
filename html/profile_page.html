@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Page</title>
+        <title>Profile page</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -28,60 +28,35 @@
                         <li> <a href='#'> Inicio </a></li>
                         <li> <a href='#'> FAQs </a></li>
                         <li> <a href='#'> Campañas </a></li>
-                        <li> <button class = "button_navbar"> Iniciar Sesion </button> </li>
+                        <li> <button class = "button_navbar"> Cerrar Sesion </button> </li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <div class="grid_container_p">
-            <div class="caja_grid">
-                <img class= "image_home" src="resources/images/Foto_Home.JPG" alt="Foto_home">
-            </div>
-            <div class="caja_grid">
-                <p class="top_text"> Sanitae </p>
-                <p class="medium_text"> Con Sanitae ayudas mucho, con muy poco. </p>
-                <p class="small_text">
-                    Sanitae es una empresa de crowfunding que permite que cualquier persona 
-                    pueda aportar su grano de arena al sector sanitario realizando donaciones voluntarias 
-                    que supondrán una mejora en el material sanitario de los hospitales públicos madrileños
-                    más salpicados por estos momentos de escasez.
-                    Todo hospital debe contar con los aparatos y equipos médicos correctos y para garantizar
-                    la calidad y estabilidad de estos se necesita la contribución de todos. Acuérdate, con Sanitae ayudas mucho, con muy poco.
-                </p>
-                <button class="button_navbar"> Nuestras Campañas </button>
-            </div>
-        </div>
-        <div class="grid_container_c">
-            <div class="caja_grid">
-                <img src="resources/images/Emoji_ 1.JPG" alt="Emoji1">
-                <p>Tu participación es clave. 
-                    Puedes donar una pequeña 
-                    parte que contribuirá 
-                    a un gran fin.</p>
-            </div>
-            <div class="caja_grid">
-                <img src="resources/images/Emoji_2.JPG" alt="Emoji2">
-                <p>Tanto el material a donar 
-                    como el hospital al que será donado 
-                    será elección tuya. Con ello podrás 
-                    ayudar al hospital 
-                    que tu más desees.</p>
-            </div>
-            <div class="caja_grid">
-                <img src="resources/images/Emoji_3.JPG" alt="Emoji3">
-                <p> Configuración simple. 
-                    Podrás comenzar el proceso 
-                    de donación fácilmente,
-                    solo es necesario registrarse. </p>
-            </div>
-            <div class="caja_grid">
-                <img src="resources/images/Emoji_4.JPG" alt="Emoji4">
-                <p>Nunca ayudar había sido tan sencillo. 
-                    Involúcrate y aporta tu grano de arena 
-                    a esta causa. </p>
+
+        <div class="profile_container">
+            <h1> Área privada </h1> 
+            <div class="cajas_privada">
+                <div class="caja_texto_perfil"><h2> Mi Perfil </h2>
+                    <img class="rounded-circle_profile" src="../html/resources/images/profile.jpeg" width="300">
+                    <p class="text_profile"> Marina González </p>
+                    <p class="text_profile"> @marina199 </p>
+                    <p class="text_profile"> Particular </p>
+                    <button class='button_profile'>  Modificar datos personales</button>
+                </div>
+                <div class="caja_texto_perfil"><h2> Mis donaciones </h2>
+                    <p class="text_question">  Campaña: </p> <p class="text_answer">  Respiradores y monitores de signos vitales. </p>
+                    <p class="text_question"> Suma total: </p> <p class="text_answer">  50$ </p>
+                    <p class="text_question"> Donaciones realizadas: </p> <p class="text_answer"> 2 </p>
+                    <p class="text_question"> Última donación: </p> <p class="text_answer">  4 días (20/11/2021) </p>
+                    <p class="text_question"> Estado final de la donación: </p> <p class="text_answer">  Éxito </p>
+                    <p class="text_question"> Recaudación total de la donación: </p> <p class="text_answer">  500$ </p>
+                    <button class='button_profile'>  Historial de donaciones </button>
+                </div>
             </div>
             <div class="push"> </div>
         </div>
+
         <footer>
             <div class="footer">
                 <h3> Sanitae Foundation</h3>
@@ -101,5 +76,4 @@
             </div>
         </footer>
     </body>
-
 </html>
