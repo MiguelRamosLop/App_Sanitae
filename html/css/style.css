@@ -10,8 +10,6 @@ header {
 
 *{
     --color_items : #0066FF;
-    margin:20;
-    padding:20;
     box-sizing: border-box;
 }
 
@@ -226,13 +224,19 @@ body {
 }
 
 .footer {
+    /*position: fixed;
+    bottom:0;
+    width: 100vw;*/
     background-color: white;
-    height: auto;
     width: 100%;
     padding-top: 40px;
     color: var(--color_items);
     text-align: center;
     justify-content: center;
+}
+
+.footer, .push {
+    height: 100%;
 }
 
 .footer_content {
@@ -366,16 +370,6 @@ body {
     text-decoration: underline;
     transition: 0.5s;
 }
-
-.signup_bg_container {
-    margin: 0;
-    padding: 0;
-    background-image: url(../resources/images/Registro_bg.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
 .rbtn {
     display: block;
     position: relative;
@@ -388,4 +382,12 @@ body {
     color: var(--color_items);
     display: inline-block;
     align-items: left;
+}
+
+.signup_bg_container {
+    min-height: 130vh;
+    margin-bottom: 30px;
+    background-image: url(../resources/images/Registro_bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
