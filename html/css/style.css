@@ -454,7 +454,7 @@ body {
 }
 
 .page_btns {
-    margin-left: 5vw;
+    margin-left: 75vw;
     color:var(--color_items)
 }
 
@@ -571,4 +571,107 @@ body {
     font-size: 15px;
     font-weight: lighter;
     margin-left: 10vw;
+}
+
+.donation_container {
+    min-height: 150vh;
+    min-width: 100vw;
+    margin-bottom: -100px;
+}
+
+.donation_container h1{
+    text-align: center;
+    border-bottom: 1px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color_items);
+}
+
+.colaboraciones {
+    list-style: none;
+    display: flex;
+    padding-left: 1vw;
+}
+
+.colaboraciones a {
+    text-decoration: none;
+    padding-right: 5vw;
+}
+
+.loading_bar {
+    position: relative;
+    width: 500px;
+    height: 3em;
+    background-color: var(--color_items);
+    border-radius: 1.5rem;
+    color: var(--color_items);
+}
+
+.loading_bar::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-left: .5em;
+    margin-top: .5em;
+    padding-bottom: .5em;
+    background-color: aqua;
+    border-radius: 1em;
+    width: 15.6em;
+    font-weight: bold;
+}
+
+.cifra_container {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    color: var(--color_items);
+    font-size: 15px;
+}
+
+.cifra {
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid var(--color_items);
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight:lighter;
+    color: var(--color_items);
+    padding: 0;
+    margin: 0;
+    width: 25%;
+}
+
+.caja_texto_donacion {
+    color: var(--color_items);
+    background-color: white;
+    margin: 30px;
+    margin-top:30vh;
+    padding: 20px;
+    height: 80vh;
+    justify-content: center;
+    text-align: justify;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.donacion_formalizar_container {
+    justify-content: center;
+    padding-left: 15vw;
+}
+
+.metodos_pago {
+    list-style: none;
+    display: grid;
+    padding-bottom: 2vh;
+    justify-content: center;
+}
+
+.metodos_pago  img{
+    text-decoration: none;
+    padding-right: 2vw;
+}
+
+.metodos_pago img:hover {
+    transform: scale(1.125);
 }
