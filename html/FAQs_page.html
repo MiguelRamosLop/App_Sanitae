@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donations Page</title>
+    <title>FAQS Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -33,55 +33,65 @@
             </div>
         </nav>
     </header>
-
-    <div class="donation_container">
-        <h1> Mascarillas y lámparas quirúrgicas </h1>   
-        <div class="cajas">
-            <div class="caja_texto">
-                <h2> Descripción de la campaña </h2>
-                    <img class="producto" src="../html/resources/images/mascarillas_en_hospitales.jpeg"  alt="aparato de anestesiología">
-                    <p> Ofrece una mejor asistencia hospitalaria mediante donaciones de mascarillas 
-                        y aparatos de anestesiología. Durante este periodo pasado de pandemia se estan 
-                        derrochando grandes cantidades de mascarillas, ayuda a recaudar fondos para poder 
-                        contar siempre con mascarillas en buen estado para todos. Además, pese al elevado 
-                        precio de los aparatos de anestesiología resulta muy complejo para algunos hospitales
-                        publicos poder acceder a ellos.<br>
-                        <br>
-                        La recaudación que se quiere alcanzar es de <strong> $1,000.00. </strong> <br>
-                        <br>
-
-                    </p>
-                    <h3> Campaña disponible en los hospitales: </h3>
-                    <div class="caja_flex">
-                        <ul class="colaboraciones">
-                            <li class="a"><a href="#"><img src="resources/images/Hospital_12_oct.jpg" alt="logo hospital 12 de octubre madrid" width="200px"></a></li>
-                            <li class="a"><a href="#"><img src="resources/images/Hospital_La_Paz.JPG" alt="logo hospital la paz madrid" width="200px"></a></li>
-                        </ul>
+    <section class="section_faqs">
+        <div class="container_faqs">
+            <h1> Preguntas frecuentes</h1>
+            <div class="accordion">
+               <div class="accordion_item" id="question1">
+                   <a class="accordion_link" href="#question1">
+                        ¿Cómo puedo registrarme?
+                       <span>&#9776;</span>
+                   </a>
+                   <div class="answer">
+                       <p>
+                            El proceso es sencillo. Solo hay que completar diferentes campos personales
+                            y crear un username y una contraseña.
+                       </p>
                     </div>
+               </div> 
+               
+               <div class="accordion_item" id="question2">
+                   <a class="accordion_link" href="#question2">
+                       ¿Cómo funcionan las donaciones? 
+                       <span>&#9776;</span>
+                   </a>
+                   <div class="answer">
+                        <p>
+                            Se deberá escoger una campaña y realizar la donacion mediante las formas de 
+                            pago disponibles. 
+                       </p>
+                    </div>
+               </div> 
+               <div class="accordion_item" id="question3">
+                   <a class="accordion_link" href="#question3">
+                       ¿A qué hospitales puedo donar?
+                       <span>&#9776;</span>
+                   </a>
+                   <div class="answer">
+                       <p>
+                            Las hospitales a los que van destinadas las donaciones 
+                            varían respecto a las necesidades de cada uno.
+                       </p>
+                    </div>
+               </div> 
+               
+               <div class="accordion_item" id="question4">
+                   <a class="accordion_link" href="#question4">
+                       ¿Todo el proceso es legal?
+                       <span>&#9776;</span>
+                   </a>
+                   <div class="answer">
+                       <p>
+                            Claro,trabajamos activamente con los hospitales más importantes
+                            de Madrid teniendo cientos de donaciones al día.
+                       </p>
+                    </div>
+               </div> 
             </div>
-            <div class="caja_texto_donacion">
-                <h2> Realiza tu contribución </h2>
-                <div class="loading_bar" data-label=" Obtenido: $479,00 (47,5%)"> </div> 
-                <div class="cifra_container">
-                    <label for="name">Introduce la cifra a donar ( Formato: $DD,DD): $</label>
-                    <input type="text" class="cifra" name="cifra" required minlength="6" maxlength="6" size="6">
-                </div>     
-                <p> Escoge una forma de realizar la donación: </p>  
-                <div class="caja_flex">
-                    <ul class="metodos_pago">
-                        <li class="visa"><a href="#"><img src="resources/images/visa.JPG" alt="visa" width="75px"></a></li>
-                        <li class="paypal"><a href="#"><img src="resources/images/paypal.JPG" alt="paypal" width="80px"></a></li>
-                        <li class="mastercard"><a href="#"><img src="resources/images/mastercard.JPG" alt="mastercard" width="80px"></a></li>
-                        <li class="bizum"><a href="#"><img src="resources/images/bizum.JPG" alt="bizum" width="80px"></a></li>
-                    </ul>
-                </div>         
-                <div class="donacion_formalizar_container">
-                    <button class="button_navbar"> Formalizar la donación </button>
-                </div>
-            </div>
-
+        </div> 
         <div class="push"> </div>
-    </div>
+    </section>
+    
 
     <footer>
         <div class="footer">

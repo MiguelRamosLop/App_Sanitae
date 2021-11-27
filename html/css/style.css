@@ -481,11 +481,20 @@ body {
     font-weight: bold;
 }
 
+.section_account {
+    min-height: 100vh;
+    margin-bottom: -50px;
+    background-image: url(../resources/images/faqs_bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
 .profile_container {
     min-height: 100vh;
     min-width: 100vw;
     margin-bottom: -100px;
-    background-image: url(../resources/images/profile_bg.JPG);
+    background-image: url(../resources/images/faqs_bg.JPG);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -674,4 +683,84 @@ body {
 
 .metodos_pago img:hover {
     transform: scale(1.125);
+}
+
+.container_faqs {
+    min-height: 100vh;
+    margin-bottom: -50px;
+    padding: 0 1.5rem;
+}
+
+.container_faqs h1 {
+    text-align: center;
+    border-bottom: 1px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color_items);
+}
+
+.section_faqs {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin:0;
+    padding:0;
+    background-image: url(../resources/images/faqs_bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.accordion_item {
+    background-color: rgba(4, 4, 236, 0.2);
+    border-radius: .4em;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0, 0, 0, .2);
+}
+
+.accordion_link {
+    font-size: medium;
+    color: var(--color_items);
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem 0;
+    padding-bottom: 0.4rem;
+    font-weight: bold;
+
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color:transparent;
+    padding: .3rem;
+    border-radius: 0.2em;
+    transition: max-height 650ms;
+}
+
+.answer::before {
+    content: "";
+    position: absolute;
+    width: .2rem;
+    height: 90%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    
+}
+
+.answer p {
+    color: var(--color_items);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.accordion_item:target .answer {
+    max-height: 20rem;
 }
