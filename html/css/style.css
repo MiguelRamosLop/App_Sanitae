@@ -481,15 +481,6 @@ body {
     font-weight: bold;
 }
 
-.section_account {
-    min-height: 100vh;
-    margin-bottom: -50px;
-    background-image: url(../resources/images/faqs_bg.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
 .profile_container {
     min-height: 100vh;
     min-width: 100vw;
@@ -764,3 +755,13 @@ body {
 .accordion_item:target .answer {
     max-height: 20rem;
 }
+
+.section_account_container {
+    min-height: 100vh;
+    margin-bottom: -50px;
+    background-image: url(../resources/images/faqs_bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
