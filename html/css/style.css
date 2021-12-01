@@ -597,51 +597,6 @@ body {
     margin-left: 10vw;
 }
 
-/* For SINGLE CAMPAIGN page*/
-
-.single_campaign_container {
-    min-height: 150vh;
-    min-width: 90vw;
-    margin-bottom: -100px;
-}
-
-.single_campaign_container h1 {
-    text-align: center;
-    border-bottom: 1px;
-    font-size: 50px;
-    font-weight: bold;
-    color: var(--color_items);
-}
-
-.environment_campaigns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 10px;
-    padding: 0;
-    margin: 1% auto;
-    list-style: none;
-}
-
-.environment_campaigns_data {
-    color: var(--color_items);
-    background-color: white;
-    margin: 30px;
-    padding: 20px;
-    height: auto;
-    justify-content: center;
-    text-align: justify;
-    border: none;
-}
-
-.environment_campaigns_data h2 {
-    text-align: center;
-    border-bottom: 1px;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--color_items);
-}
-
 /* For DONATIONS page */
 
 .donation_container {
@@ -713,19 +668,6 @@ body {
     padding: 0;
     margin: 0;
     width: 25%;
-}
-
-.caja_texto_donacion {
-    color: var(--color_items);
-    background-color: white;
-    margin: 30px;
-    margin-top:30vh;
-    padding: 20px;
-    height: 80vh;
-    justify-content: center;
-    text-align: justify;
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
 
 .donacion_formalizar_container {
