@@ -120,6 +120,12 @@ body {
     text-align: center;
 }
 
+.image_home {
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 100%;
+}
+
 
 @media only screen and (max-width: 600px) {
     .caja_grid{
@@ -241,8 +247,8 @@ body {
 
 .center {
     position: absolute;
-    top: 30%;
-    left: 32%;
+    top: 35vh;
+    left: 35vw;
 }
 
 .center h1 {
@@ -340,7 +346,7 @@ body {
 .signup_bg_container {
     min-height: 130vh;
     margin-bottom: 30px;
-    background-image: url(../resources/images/Registro_bg.JPG);
+    background-image: url(../resources/images/signup_bg_v3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -692,6 +698,7 @@ body {
 
 .section_faqs {
     display:flex;
+    margin-top: 20vh;
     align-items: center;
     justify-content: center;
     width: 100%;
