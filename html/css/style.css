@@ -28,7 +28,7 @@ body {
     align-items: center;
     background-color: white;
     color: var(--color_items);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .nav a {
@@ -74,7 +74,6 @@ body {
     cursor: pointer;
     padding: .5em .75em;
     border-radius: .25rem;
-    margin-top: 2.45em;
 }
 
 .button_navbar:hover {
@@ -155,7 +154,7 @@ body {
 .footer_content {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
 }
 
@@ -741,7 +740,6 @@ body {
     padding-top: 1rem 0;
     padding-bottom: 0.4rem;
     font-weight: bold;
-
 }
 
 .answer {
