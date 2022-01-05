@@ -11,30 +11,32 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar">
-                <div class="nav_links">
-                    <ul>
-                        <li> 
-                            <div class="brand_title">
-                                <img class= "image" src="resources/images/Logo_Sanitae.JPG" alt="Sanitae" width="270" height="100">
-                            </div>  
-                        </li>
-                        <li>
-                            <a href='#'>
-                                <form>
-                                    <input type="text" name="search" class = "buscar" placeholder="      Buscar...">
-                                </form>
-                            </a>
-                        </li>
-                        <li> <a href='../html/home_page.html'> Inicio </a></li>
-                        <li> <a href='../html/FAQs_page.html'> FAQs </a></li>
-                        <li> <a href='../html/campaigns_page.html'> Campañas </a></li>
-                        <li> <a href='../html/login_page.html'>  <button class = "button_navbar"> Iniciar Sesion</button></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        <nav class="navbar">
+            <div class="brand_title">
+                <img class= "image" src="resources/images/Logo_Sanitae.png" alt="Logo Sanitae" width="160px">
+            </div>
+            <a href="#" class="toggle_button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar_links">
+                <ul>
+                    <li>
+                        <a href="../html/home_page.html"> Inicio </a>
+                    </li>
+                    <li>
+                        <a href="../html/FAQs_page.html"> FAQs </a>
+                    </li>
+                    <li>
+                        <a href="../html/campaigns_page.html"> Campañas </a>
+                    </li>
+                    <li>
+                        <a href="../html/login_page.html"> Iniciar Sesión </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <div class = "campaigns_container">
             <h1> Nuestras Campañas </h1>   
             <h2> Destacadas</h2>
@@ -76,8 +78,6 @@
                         <a class="info" href="#"> +17 </a>
                     </div>
                 </div>
-            </div>
-            <div class="cajas">
                 <div class="caja_texto"><h2> Electrocardiógrafos y Desfibriladores </h2>
                     <img class="producto" src="../html/resources/images/desfribrilador.jpg"  alt="desfibrilador">
                     <p> Absolutamente siempre debe haber disponibilidad de estos aparatos médicos, 
@@ -127,7 +127,7 @@
                 <div class="footer_col_1">
                     <h3 class="footer_text"> Descarga nuestra app oficial </h3>
                     <div class="desc">
-                        <img class= "image" src="resources/images/app_store.png" alt="Sanitae" width="300px">
+                        <img class= "image" src="resources/images/app_store.JPG" alt="Sanitae" width="300px">
 
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     <div><h3 class="footer_text"> Sanitae Foundation</h3></div>
                     <div class="footer2"><img class= "image" src="resources/images/Logo_Sanitae.png" alt="Sanitae" width="206px"></div>
                     <div class="caja_flex">
-                        <p class="footer_2_text"> © 2021 Sanitae Condiciones  Privacidad   Información Legal </p>
+                        <p class="footer_2_text"> © 2022 Sanitae Foundation</p>
                     </div>
                 </div>
                 <div class="footer_col_3">
@@ -151,5 +151,6 @@
                 </div>
             </div>
         </footer>
+        <script type="text/javascript" src="./js/script.js"></script>
     </body>
 </html>

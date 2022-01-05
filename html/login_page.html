@@ -11,28 +11,32 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="brand_title">
-               <img class= "image" src="resources/images/Logo_Sanitae.JPG" alt="Sanitae" width="270" height="100">
-            </div>
-            <div class="nav_links">
-                <ul>
-                    <li>
-                        <a href='#'>
-                            <form>
-                                <input type="text" name="search" class = "buscar" placeholder="      Buscar...">
-                            </form>
-                        </a>
-                    </li>
-                    <li> <a href='../html/home_page.html'> Inicio </a></li>
-                        <li> <a href='../html/FAQs_page.html'> FAQs </a></li>
-                        <li> <a href='../html/campaigns_page.html'> Campañas </a></li>
-                        <li> <a href='../html/login_page.html'>  <button class = "button_navbar"> Iniciar Sesion</button></a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="brand_title">
+            <img class= "image" src="resources/images/Logo_Sanitae.png" alt="Logo Sanitae" width="160px">
+        </div>
+        <a href="#" class="toggle_button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar_links">
+            <ul>
+                <li>
+                    <a href="../html/home_page.html"> Inicio </a>
+                </li>
+                <li>
+                    <a href="../html/FAQs_page.html"> FAQs </a>
+                </li>
+                <li>
+                    <a href="../html/campaigns_page.html"> Campañas </a>
+                </li>
+                <li>
+                    <a href="../html/login_page.html"> Iniciar Sesión </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <section class = "login_bg_container">
         <div class = "center">
             <h1> Accede a tu Área Privada </h1>
@@ -43,7 +47,7 @@
                 <div class="text_field">
                     <input type="password" name="password" placeholder="Contraseña">
                 </div>
-                <button type="submit" name="login" class="button_navbar"> Entrar </button>
+                <button type="submit" name="login" class="default_btn"> Entrar </button>
                 <div class="registrate_link"> 
                     ¿No tienes cuenta? <a href="../html/signup_page.html"> Regístrate Aquí </a></div>
             </form>
@@ -55,7 +59,7 @@
             <div class="footer_col_1">
                 <h3 class="footer_text"> Descarga nuestra app oficial </h3>
                 <div class="desc">
-                    <img class= "image" src="resources/images/app_store.png" alt="Sanitae" width="300px">
+                    <img class= "image" src="resources/images/app_store.JPG" alt="Sanitae" width="300px">
 
                 </div>
             </div>
@@ -63,7 +67,7 @@
                 <div><h3 class="footer_text"> Sanitae Foundation</h3></div>
                 <div class="footer2"><img class= "image" src="resources/images/Logo_Sanitae.png" alt="Sanitae" width="206px"></div>
                 <div class="caja_flex">
-                    <p class="footer_2_text"> © 2021 Sanitae Condiciones  Privacidad   Información Legal </p>
+                    <p class="footer_2_text"> © 2022 Sanitae Foundation</p>
                 </div>
             </div>
             <div class="footer_col_3">
@@ -79,5 +83,6 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="./js/navbar_script.js"></script>
 </body>
 </html>

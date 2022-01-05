@@ -51,15 +51,32 @@ body {
 
 .navbar_links li a {
     text-decoration: none;
+    position: relative;
     font-size: 1.2rem;
     padding: 1rem;
+    padding-left: 3vw;
     display: block;
+    letter-spacing: 0.2px;
     color: var(--color_items);
+    padding: 0 10px;
+    font-weight: bold;
 }
 
-.navbar_links li:hover {
-   text-decoration: underline;
-   font-weight: bold;
+.navbar_links li a:after {
+    content:"";
+    position: absolute;
+    background: var(--color_items);
+    height: 3px;
+    width:  0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.navbar_links li a:hover:after {
+    width:  100%;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .toggle_button {
@@ -74,7 +91,7 @@ body {
     margin-top: 1vh;
 }
 
-.button_navbar {
+.default_btn{
     background-color: var(--color_items);
     color: white;
     font-size: medium;
@@ -85,7 +102,7 @@ body {
     border-radius: .25rem;
 }
 
-.button_navbar:hover {
+.default_btn:hover {
     background-color: var(--color_items);
     color: white;
     text-decoration: underline;
@@ -111,6 +128,7 @@ body {
 
     .navbar_links {
         display: none;
+        padding-left: 20vw;
     }
 
     .navbar {
@@ -175,6 +193,7 @@ body {
 .footer_col_1,.footer_col_2,.footer_col_3{
     width: 350px;
 }
+
 .push {
     height: 100px;
 }
@@ -183,6 +202,20 @@ body {
     background-color: white;
     color: var(--color_items);
     font-size: 8px;
+}
+
+@media only screen and (max-width: 750px) {
+    .footer_col_1,.footer_col_2,.footer_col_3{
+        width: 20%;
+    }
+
+    .image {
+        width: 140px;
+    }
+
+    .footer_2_text {
+        font-size: 0.5px;
+    }
 }
 
 .footer_col_3 ul {
@@ -204,6 +237,20 @@ body {
 
 .Image_Google_play {
     cursor: pointer;
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.redes li {
+    margin: 0 5px;
+}
+.redes a {
+    text-decoration: none;
 }
 
 /* For HOMEPAGE */
@@ -274,20 +321,6 @@ body {
     font-size: 14px;
     text-align: center;
     margin: 0;
-}
-
-.redes {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-}
-.redes li {
-    margin: 0 5px;
-}
-.redes a {
-    text-decoration: none;
 }
 
 /* For LOGIN page*/
@@ -435,26 +468,30 @@ body {
 }
 
 .cajas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-auto-rows: 50px; 
-    grid-gap: 10px;
-    padding: 0;
-    margin: 1% auto;
-    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .caja_texto {
     color: var(--color_items);
     background-color: white;
-    margin: 30px;
-    padding: 20px;
+    width: 44%;
     height: auto;
+    padding: 20px;
+    margin: 30px;
     justify-content: center;
     text-align: justify;
+    text-decoration: none;
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+@media only screen and (max-width: 750px) {
+    .caja_texto{
+        width: 90%;
+    }
 }
 
 .caja_texto h2 {
