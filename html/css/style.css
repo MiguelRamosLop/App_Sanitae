@@ -253,10 +253,51 @@ body {
     text-decoration: none;
 }
 
+.button_container {
+    text-align: center;
+}
+
+.btn {
+    border: 1px solid var(--color_items);
+    background: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    color: var(--color_items);
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--color_items);
+    z-index: -1;
+    transition: 0.8s;
+    top: 0;
+    border-radius:  0 0 50% 50%;
+}
+
+.btn:hover::before {
+    height: 180%;
+}
+
 /* For HOMEPAGE */
 
 .grid_container_p{
     display: grid;
+    background-image: url("../resources/images/Foto_Home.JPG");
+    background-repeat: no-repeat;
     grid-template-columns: 40% 60%;
     margin: 1% auto;
     list-style: none;
@@ -264,7 +305,7 @@ body {
 .caja_grid {
     color: var(--color_items);
     display: block;
-    background-color: white;
+    background-color: transparent;
     margin: 30px;
     margin-left: 0px;
     height: auto;
@@ -277,9 +318,13 @@ body {
     width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .caja_grid{
         width: 90%;
+    }
+
+    .top_text, .medium_text, .small_text {
+        color: black;
     }
 }
 
