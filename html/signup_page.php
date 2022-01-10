@@ -23,16 +23,16 @@
         <div class="navbar_links">
             <ul>
                 <li>
-                    <a href="../html/home_page.html"> Inicio </a>
+                    <a href="../html/home_page.php"> Inicio </a>
                 </li>
                 <li>
-                    <a href="../html/FAQs_page.html"> FAQs </a>
+                    <a href="../html/FAQs_page.php"> FAQs </a>
                 </li>
                 <li>
-                    <a href="../html/campaigns_page.html"> Campañas </a>
+                    <a href="../html/campaigns_page.php"> Campañas </a>
                 </li>
                 <li>
-                    <a href="../html/login_page.html"> Iniciar Sesión </a>
+                    <a href="../html/login_page.php"> Iniciar Sesión </a>
                 </li>
             </ul>
         </div>
@@ -40,7 +40,7 @@
     <div class="signup_bg_container">
         <div class="center">
             <h1> Bienvenido a Sanitae </h1>
-            <form method="post" action="home_page.html">
+            <form method="post" action="home_page.php">
                 <div class="text_field_nom_ape">
                     <input type="text" name="nombre" placeholder="Nombre">
                     <input type="password" name="apellidos" placeholder="Apellidos">

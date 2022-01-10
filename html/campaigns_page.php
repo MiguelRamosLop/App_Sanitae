@@ -23,16 +23,16 @@
             <div class="navbar_links">
                 <ul>
                     <li>
-                        <a href="../html/home_page.html"> Inicio </a>
+                        <a href="../html/home_page.php"> Inicio </a>
                     </li>
                     <li>
-                        <a href="../html/FAQs_page.html"> FAQs </a>
+                        <a href="../html/FAQs_page.php"> FAQs </a>
                     </li>
                     <li>
-                        <a href="../html/campaigns_page.html"> Campañas </a>
+                        <a href="../html/campaigns_page.php"> Campañas </a>
                     </li>
                     <li>
-                        <a href="../html/login_page.html"> Iniciar Sesión </a>
+                        <a href="../html/login_page.php"> Iniciar Sesión </a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@
                     </p>
                     <div class="card_footer">
                         <a class="info" href="#"> Más información</a>
-                        <button class='button_donar' onclick="window.location.href='../html/donations_page.html'">  Donar </button>
+                        <button class='button_donar' onclick="window.location.href='../html/donations_page.php'">  Donar </button>
                         <img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg" width="30">
                         <img class="rounded-circle" src="../html/resources/images/profile_photo.JPG" width="30">
                         <img class="rounded-circle" src="https://i.imgur.com/UL0GS75.jpg" width="30">
