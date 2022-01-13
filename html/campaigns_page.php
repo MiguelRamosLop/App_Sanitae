@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,7 +35,25 @@
                         <a href="../html/campaigns_page.php"> Campañas </a>
                     </li>
                     <li>
-                        <a href="../html/login_page.php"> Iniciar Sesión </a>
+                        <?php
+                        if(isset($_POST['username'])){
+                            $_SESSION['username'] = $_POST['username']; ?>
+                        <a href="user_page.php"><img src="resources/images/user.png" alt="user" width="25" height="25"></a></li>
+                    <li>
+                    <a href="logout_page.php"><img src="resources/images/log-out.png" alt="user" width="25" height="25"></a>
+                        <?php
+                        } else {
+                            if(isset($_SESSION['username'])){ ?>
+                                <a href="user_page.php"><img src="resources/images/user.png" alt="user" width="25" height="25"></a></li>
+                    <li>
+                    <a href="logout_page.php"><img src="resources/images/log-out.png" alt="user" width="25" height="25"></a>
+                            <?php
+                            } else { ?>
+                            <a href="../html/login_page.php"> Iniciar Sesión </a>
+                    <?php     }
+                        } ?>
+                        
+                    
                     </li>
                 </ul>
             </div>

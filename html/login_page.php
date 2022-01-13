@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,12 +43,13 @@
     <section class = "login_bg_container">
         <div class = "center">
         <?php
-	          if(isset($_SESSION['uname'])){
-		          echo "<p>Has iniciado sesion: " . $_SESSION['uname'] . "";
-		          echo "<p><a href='pagina3.php'>Cerrar Sesion</a></p>";
+	          if(isset($_SESSION['username'])){
+        
+		          echo "<p>Has iniciado sesion: " . $_SESSION['username'] . "";
+		          echo "<p><a href='logout_page.php'>Cerrar Sesion</a></p>";
 	        }else {
         ?>
-            <h1> Accede a tu Área Privada </h1>
+            <h1> Accede a tu Área Priveda </h1>
             <form method="post" action="home_page.php">
                 <div class="text_field">
                     <input type="text" name="username" placeholder="Nombre de usuario">
