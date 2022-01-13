@@ -404,6 +404,11 @@ body {
     padding-bottom: 5%;
 }
 
+::placeholder {
+    color: var(--color_items);
+    font-weight: bold;
+}
+
 .text_field input {
     display: inline-block;
     border: none;
@@ -467,11 +472,25 @@ body {
 /* For SIGNUP page*/
 
 .signup_bg_container {
-    min-height: 130vh;
+    min-height: 170vh;
     margin-bottom: 10px;
     background-image: url(../resources/images/Registro_bg.JPG);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 2px;
+}
+
+input.error, textarea.error {
+    border: 1px dashed red;
+    font-weight: bold;
+    color: red;
+    
 }
 
 .rbtn {
@@ -480,13 +499,19 @@ body {
     margin-bottom: 5px;
     cursor: pointer;
     padding-left: 10px;
+    font-weight: bold;
+    color: var(--color_items);
+    border-radius: 5px;
+
 }
+
 
 .radio_button_signup {
     color: var(--color_items);
     display: inline-block;
     align-items: left;
 }
+
 
 /* For CAMPAIGNS page */
 
