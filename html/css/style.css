@@ -519,6 +519,14 @@ body {
     justify-content: space-evenly;
 }
 
+.logout_message {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color_items);
+    padding-top: 100px;
+}
+
 .caja_texto {
     color: var(--color_items);
     background-color: white;
