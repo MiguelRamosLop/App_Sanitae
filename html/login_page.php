@@ -49,7 +49,7 @@
 		          echo "<p><a href='logout_page.php'>Cerrar Sesion</a></p>";
 	        }else {
         ?>
-            <h1> Accede a tu Área Priveda </h1>
+            <h1> Accede a tu Área Privada </h1>
             <form method="post" action="home_page.php">
                 <div class="text_field">
                     <input type="text" name="username" placeholder="Nombre de usuario">
@@ -61,7 +61,7 @@
                     <button type="submit" name="login" class="default_btn"> Entrar </button>
                 </div>
                 <div class="registrate_link"> 
-                    ¿No tienes cuenta? <a href="../html/signup_page.php"> Regístrate Aquí </a></div>
+                    ¿No tienes cuenta? <a href="../html/signup_page.php"> Regístrate Aquí &#8594; </a></div>
             </form>
         <?php
                 }
@@ -69,35 +69,15 @@
         </div>
         <div class="push"> </div>
     </section>
-    <footer>
-        <div class="footer">
-            <div class="footer_col_1">
-                <h3 class="footer_text"> Descarga nuestra app oficial </h3>
-                <div class="desc">
-                    <img class= "image" src="resources/images/app_store.JPG" alt="Sanitae" width="300px">
+    <?php include 'footer.html' ?>
+    <script type="text/javascript">
+            const toggleBtn = document.querySelector('.toggle_button');
 
-                </div>
-            </div>
-            <div class="footer_col_2">
-                <div><h3 class="footer_text"> Sanitae Foundation</h3></div>
-                <div class="footer2"><img class= "image" src="resources/images/Logo_Sanitae.png" alt="Sanitae" width="206px"></div>
-                <div class="caja_flex">
-                    <p class="footer_2_text"> © 2022 Sanitae Foundation</p>
-                </div>
-            </div>
-            <div class="footer_col_3">
-                <h3 class="footer_text"> Redes sociales </h3>
-                <div class="caja_flex">
-                    <ul class="redes">
-                        <li class="a"><a href="#"><img src="resources/images/Facebook.png" alt="facebook" width="25" height="25"></a></li>
-                        <li class="a"><a href="#"><img src="resources/images/Twitter.png" alt="twitter" width="25" height="25"></a></li>
-                        <li class="a"><a href="#"><img src="resources/images/Telegram.png" alt="telegram" width="25" height="25"></a></li>
-                        <li class="a"><a href="#"><img src="resources/images/LinkedIn.png" alt="linkedin" width="25" height="25"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="./js/navbar_script.js"></script>
+            const navbar_links = document.querySelector('.navbar_links');
+
+            toggleBtn.addEventListener('click', function() {
+                navbar_links.classList.toggle('active');
+            });
+    </script>
 </body>
 </html>
