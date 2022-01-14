@@ -14,7 +14,10 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-    <?php include 'navbar.php' ?>
+        <?php include 'navbar.php' ?>
+            <div>
+            <h3 class="footer_text"> Ese usuario ya existe </h3>
+            </div>
         <?php include('conexion_bbdd.php') ?>
 
         <div class="signup_bg_container">

@@ -16,6 +16,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
+    <?php include 'navbar.php' ?>   
 	<div class="logout_message"><h2> Hasta Pronto!!!! </h2>
             <p> Has cerrado sesion <br>
 			<br>
@@ -23,5 +24,6 @@
             </p>
 			<img class= "image" src="resources/images/Logo_Sanitae.png" alt="Sanitae" width="206px">
     </div>
+    <?php include 'footer.html' ?>
 </body>
 </html>

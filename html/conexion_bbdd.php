@@ -3,11 +3,13 @@
   // 1. Create a database connection
   $dbhost = "localhost";
   $dbuser = "root";
-  $dbpass = "root";
+  $dbpass = "";
   $dbname = "usuarios";
   $tablename= "datos";
   $dbport = 3308;
-  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
+  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname
+                              //,$dbport
+                              );
   if ($connection) {
     echo "<script>console.log('Conexión establecida.<br>' );</script>";
   } else {
