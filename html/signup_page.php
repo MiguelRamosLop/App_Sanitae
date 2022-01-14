@@ -73,7 +73,7 @@
                         <input type="text" name="telefono" placeholder="Teléfono">
                     </div>
                     <div class="text_field">
-                        <input type="password" name="password" placeholder="Contraseña" id="password">
+                        <input type="password" name="contrasena" placeholder="Contraseña" id="password">
                     </div>
                     <div class="text_field">
                         <input type="password" name="repite_password" placeholder="Repite contraseña" id="repite_password">
@@ -81,9 +81,6 @@
                     <div class="text_field">
                         <input type="text" name="nif" placeholder="NIF">
                     </div>
-                    <div class="text_field">
-                        <input type="text" name="nacimiento" placeholder="Fecha de nacimiento (dd/mm/yyyy)">
-                    </div> 
                     <div class="radio_button_signup">
                         <p> <strong> Tipo de usuario: </strong> </p>
                         <label class="rbtn"> <strong> Particular </strong> 
@@ -97,9 +94,45 @@
                         <br>
                     </div>
                     <div class="text_field">
-                        <button type="submit" name="login" class="default_btn"> Registrarme &#8594; </button>
+                        <button type="submit" name="register" class="default_btn"> Registrarme &#8594; </button>
                     </div>
                 </form>
+                <?php 
+                    include("insertDB.php");
+                    /*
+                    if(isset($_POST['register'])){
+                        if (strlen($_POST['nombre']) >= 1 && 
+                        strlen($_POST['apellidos']) >= 1 &&
+                        strlen($_POST['username']) >= 1 &&
+                        strlen($_POST['telefono']) >= 1 &&
+                        strlen($_POST['contrasena']) >= 1 &&
+                        strlen($_POST['repite_password']) >= 1 &&
+                        strlen($_POST['nif']) >= 1 &&
+                        strlen($_POST['nacimiento']) >= 1) {
+                            $ID = (int) 7;
+                            $username = $_POST['username'];
+                            $nombre = $_POST['nombre'];
+                            $apellidos = $_POST['apellidos'];
+                            $telefono = $_POST['telefono'];
+                            $contrasena = $_POST['contrasena'];
+                            $nif = $_POST['nif'];
+                            $nacimiento = $_POST['nacimiento'];
+                            $tipo_usuario = $_POST['radio'];
+                            $query = "INSERT INTO datos (nombre, apellido, username, telefono, contrasena, nif, nacimiento, tipo_usuario) VALUES ('$nombre', '$apellidos', '$username', '$telefono', '$contrasena', '$nif', '$nacimiento', '$tipo_usuario')";
+                            echo "<script>console.log($query);</script>";
+                            $result = mysqli_query($connection, $query);
+                            if(!$result){
+                                echo "<script>console.log('Error al insertar datos en la base de datos.<br>' );</script>";
+                                die("Database query failed. " . mysqli_error($connection));
+                            } else {
+                                echo "<script>console.log('Datos insertados correctamente.<br>' );</script>";
+                            }   
+                        } else {
+                            echo "<script>console.log('Faltan datos por introducir.<br>' );</script>";
+                        }
+                    }*/
+
+                ?>
             </div>
             <div class="push"> </div>
         </div>
@@ -114,6 +147,7 @@
             toggleBtn.addEventListener('click', function() {
                 navbar_links.classList.toggle('active');
             });
+            
 
             $(document).ready(function() {
                 $("#basic-form").validate({
@@ -132,7 +166,7 @@
                             minlength: 9,
                             maxlength: 9
                         },
-                        password: {
+                        contrasena: {
                             required: true,
                             minlength: 5,
                         },
@@ -165,7 +199,7 @@
                             minlength: "Proporciona un teléfono en formato válido",
                             maxlength: "Proporciona un teléfono en formato válido"
                         },
-                        password: {
+                        contrasena: {
                             required: "Campo requerido",
                             minlength: "Tu contraseña debe tener al menos 5 caracteres"
                         },
