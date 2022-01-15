@@ -1,6 +1,3 @@
-<?php
-	session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +45,7 @@
 	        }else {
         ?>
             <h1> Accede a tu Área Privada </h1>
+            <h3 class="footer_text"> Nombre de usuario o contraseña incorrectos</h3>
             <form method="post" action="login_successful.php">
                 <div class="text_field">
                     <input type="text" name="username" placeholder="Nombre de usuario">

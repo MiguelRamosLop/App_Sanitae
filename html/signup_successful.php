@@ -68,7 +68,6 @@
 
                                 if ($result) {
                                     echo "El usuario se ha agregado correctamente";
-                                    session_destroy();
                                     header("Location: " . "login_page.php");
                                 } else {
                                     die("Database query failed. " . mysqli_error($connection));

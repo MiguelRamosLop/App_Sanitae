@@ -16,6 +16,9 @@
     </head>
     <body>
     <?php include 'navbar.php' ?>
+    <?php
+    
+    ?>
         <div class="grid_container_p">
             <div class="caja_grid">
             </div>
