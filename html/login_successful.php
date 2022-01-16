@@ -33,7 +33,7 @@
 		}
 		else{
 			//User mal
-			echo header("Location: " . "login_page2.php");
+			header("Location: " . "login_page2.php");
 		}
 
 		if($user = mysqli_fetch_assoc($user_set)) {

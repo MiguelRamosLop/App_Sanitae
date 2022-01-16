@@ -1,5 +1,15 @@
 <?php
 	session_start();
+
+    if(isset($_SESSION['username'])){}
+    else{header("Location: " . "login_page.php");}
+    if(array_key_exists('donar',$_POST)){
+        header("Location: " . "donations_page.php");
+    }
+?>
+<?php
+    include('conexion_bbdd.php');
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,11 +58,53 @@
                         <br> 
                         <br>
                     </p>
-                    <div class="loading_bar" data-label=" Obtenido: $479,00 (47,5%)"> </div> 
-                    <div class="cifra_container">
-                        <label for="name">Introduce la cifra a donar ( Formato: $DD,DD): $</label>
-                        <input type="text" class="cifra" name="cifra" required minlength="6" maxlength="6" size="6">
-                    </div>  
+                    <p> 
+                        Dinero recaudado:
+                        <?php
+                            $query = "SELECT dinero FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo $row["dinero"];
+                                    }
+                                }
+                        ?>
+                        €
+                    </p>
+                    <p> 
+                        Objetivo a recaudar:
+                        <?php
+                            $query = "SELECT objetivo FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo $row["objetivo"];
+                                    }
+                                }
+                        ?>
+                        €
+                    </p>
+                    <p> 
+                        Progreso de la recaudacion:
+                        <?php
+                            $query = "SELECT dinero,objetivo FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        $dinero = $row["dinero"];
+                                        $objetivo = $row["objetivo"];
+                                    }
+                                }
+                                $division = ($dinero/$objetivo)*100;
+                                if($division>100){
+                                    $division = 100;
+                                }
+                                echo $division;
+                                //echo $dinero;
+                                //echo $objetivo;
+                        ?>
+                        %
+                    </p> 
                     <div class="radio_button_signup">
                         <p> Escoge el hospital a donar:  </p>
                         <label class="rbtn">  Hospital Universidtario de La Paz 
@@ -63,21 +115,50 @@
                             <input type="radio" name="radio">
                             <span class="checkmark"></span>
                         </label>
-                    </div>   
-                    <p> Escoge una forma de realizar la donación: </p>  
-                    <div class="caja_flex">
-                        <ul class="metodos_pago">
-                            <li class="visa"><a href="#"><img src="resources/images/visa.JPG" alt="visa" width="75px"></a></li>
-                            <li class="paypal"><a href="#"><img src="resources/images/paypal.JPG" alt="paypal" width="80px"></a></li>
-                            <li class="mastercard"><a href="#"><img src="resources/images/mastercard.JPG" alt="mastercard" width="80px"></a></li>
-                            <li class="bizum"><a href="#"><img src="resources/images/bizum.JPG" alt="bizum" width="80px"></a></li>
-                        </ul>
-                    </div>         
-                    <div class="donacion_formalizar_container">
-                        <button class="default_btn"> Formalizar la donación </button>
-                    </div>
-                </div>
+                    </div>  
+                    <p> Introduzca sus datos: </p>
+                    <form method="post">
+                        <div class="metodos_pago">
+                            <input type="text" name="numero" placeholder="Numero de tarjeta">
+                            <input type="text" name="cvv" placeholder="Numero CVV">
+                            <input type="text" name="mes" placeholder="Mes de caducidad">
+                            <input type="text" name="dia" placeholder="Dia de caducidad">
+                            <input type="text" name="nombre" placeholder="Nombre en la tarjeta">
+                            <input type="text" name="cifra" id="cifra" placeholder="Cantidad a donar" value="<?= isset($_POST['cifra']) ? htmlspecialchars($_POST['cifra']) : '' ?>" onclick="document.getElementById('cifra').value = '';"/>
+                        </div> 
+                        <div class="button_container">
+                            <button type="submit" name="donar" id="donar" class="default_btn"> Donar </button>
+                        </div>
+                    </form>
+                    <?php
+                    function ingresardinero($connection){
+                        $query = "SELECT dinero FROM campanas where id = 2";
+                        $result = mysqli_query($connection, $query);
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    $dinero = $row["dinero"];
+                                }
+                            }
 
+                        $cifra = $_POST["cifra"];
+                        $suma = $cifra + $dinero;
+                        
+                        $query2 = "UPDATE campanas set dinero = '$suma' where id = 2";
+                        $result2 = mysqli_query($connection, $query2);
+
+                        if ($result2 && mysqli_affected_rows($connection) == 1) {
+                            echo "Success!";
+                        } else {
+                            die("Database query failed. " . mysqli_error($connection));
+                        }
+                        
+                    }
+                    if(array_key_exists('donar',$_POST)){
+                    ingresardinero($connection);
+                    nepe();
+                    }
+                    ?>
+                </div>
             <div class="push"> </div>
         </div>
         <?php include 'footer.html' ?>

@@ -1,6 +1,9 @@
 <?php
 	session_start();
 ?>
+<?php
+    include('conexion_bbdd.php') 
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +18,51 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     </head>
     <body>
-    <?php include 'navbar.php' ?>
+    <nav class="navbar">
+    <div class="brand_title">
+        <img class= "image" src="resources/images/Logo_Sanitae.png" alt="Logo Sanitae" width="160px">
+    </div>
+    <a href="#" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class="navbar_links">
+        <ul>
+            <li>
+                <a href="../html/home_page.php"> Inicio </a>
+            </li>
+            <li>
+                <a href="../html/FAQs_page.php"> FAQs </a>
+            </li>
+            <li>
+                <a href="../html/campaigns_page.php"> Campañas </a>
+            </li>
+            <li>
+                    <?php
+                    if(isset($_POST['username'])){
+                        $_SESSION['username'] = $_POST['username'];
+                        ?>
+                    <a href="user_page.php"><img src="resources/images/user.png" alt="user" width="25" height="25"></a></li>
+                <li>
+                <a href="logout_page.php"><img src="resources/images/log-out.png" alt="user" width="25" height="25"></a>
+                    <?php
+                    } else {
+                        if(isset($_SESSION['username'])){ ?>
+                            <a href="user_page.php"><img src="resources/images/user.png" alt="user" width="25" height="25"></a></li>
+                <li>
+                <a href="logout_page.php"><img src="resources/images/log-out.png" alt="user" width="25" height="25"></a>
+                        <?php
+                        } else { ?>
+                        <a href="../html/login_page.php"> Iniciar Sesión </a>
+                <?php     }
+                    } ?>
+                    
+                
+                </li>
+            </ul>
+    </div>
+    </nav>  
         <div class="profile_container">
             <div class="profile_header">
                 <div class="profile_img">
@@ -29,11 +76,40 @@
             <div class="main_bd">
                 <div class="left_side">
                     <div class="profile_side">
-                       <h3> Javier Ramos</h3> 
+                       <h3>
+                            <?php
+                                if(isset($_SESSION['username'])){
+                                    $username = $_SESSION['username'];
+                                    $query = "SELECT nombre,apellido FROM datos where username = '$username'" ;
+                                    $result = mysqli_query($connection, $query);
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                            echo $row["nombre"]. " " .$row["apellido"];
+                                        }
+                                    }
+                                }
+                            ?>
+                       </h3> 
                         <p> Comunidad de Madrid, España</p>
                         <p>
                             <img src="../html/resources/images/phone.png" alt="telefono" width="20">
-                            <span class="mobile_message">+637591862</span>
+                            <span class="mobile_message">
+                            <?php
+
+                                if(isset($_SESSION['username'])){
+                                    $username = $_SESSION['username'];
+                                    $query = "SELECT telefono FROM datos where username = '$username'" ;
+                                    $result = mysqli_query($connection, $query);
+
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                            echo $row["telefono"];
+                                        }
+                                    }
+                                }
+
+                                ?>
+                            </span>
                         </p>
                         <p>
                             <img src="../html/resources/images/bell.png" alt="campana" width="20">

@@ -16,7 +16,32 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
-    <?php include 'navbar.php' ?>   
+<nav class="navbar">
+    <div class="brand_title">
+        <img class= "image" src="resources/images/Logo_Sanitae.png" alt="Logo Sanitae" width="160px">
+    </div>
+    <a href="#" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class="navbar_links">
+        <ul>
+            <li>
+                <a href="../html/home_page.php"> Inicio </a>
+            </li>
+            <li>
+                <a href="../html/FAQs_page.php"> FAQs </a>
+            </li>
+            <li>
+                <a href="../html/campaigns_page.php"> Campañas </a>
+            </li>
+            <li>
+                <a href="../html/login_page.php"> Iniciar Sesión </a>
+            </li>
+            </ul>
+    </div>
+</nav>  
 	<div class="logout_message"><h2> Hasta Pronto!!!! </h2>
             <p> Has cerrado sesion <br>
 			<br>

@@ -1,5 +1,8 @@
 <?php
 	session_start();
+
+    //if(isset($_POST['username'])){}
+    //else{header("Location: " . "login_page.php");}
 ?>
 <!DOCTYPE html>
 <html lang="es">
