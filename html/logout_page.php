@@ -47,7 +47,6 @@
 			<br>
 			<button class="btn" onclick="window.location.href='login_page.php'"> Volver a inicio &#8594;</button>
             </p>
-			<img class= "image" src="resources/images/Logo_Sanitae.png" alt="Sanitae" width="206px">
     </div>
     <?php include 'footer.html' ?>
 </body>

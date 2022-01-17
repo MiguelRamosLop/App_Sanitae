@@ -586,7 +586,7 @@ input.error, textarea.error {
     padding-left: 10vw;
 }
 
-.product:hover, .producto:hover {
+.product:hover, .producto:hover,  .producto_v2:hover {
     transform: scale(1.025);
 
 }
@@ -596,7 +596,13 @@ input.error, textarea.error {
     height: 200;
     justify-content: center;
     align-items: center;
-    padding-left: 5vw;
+    padding-left: 2vw;
+}
+
+.producto_v2 {
+    justify-content: center;
+    align-items: center;
+    padding-left: 2vw;
 }
 
 .info {
@@ -779,6 +785,14 @@ input.error, textarea.error {
 .colaboraciones a {
     text-decoration: none;
     padding-right: 5vw;
+}
+
+.a1:hover {
+    transform: scale(1.025);
+}
+
+.a2:hover {
+    transform: scale(1.025);
 }
 
 .loading_bar {

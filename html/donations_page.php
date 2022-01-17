@@ -30,7 +30,7 @@
             <div class="cajas">
                 <div class="caja_texto">
                     <h2> Descripción de la campaña </h2>
-                        <img class="producto" src="../html/resources/images/mascarillas_en_hospitales.jpeg"  alt="aparato de anestesiología">
+                        <img class="producto_v2" src="../html/resources/images/mascarillas_en_hospitales.jpeg"  alt="aparato de anestesiología">
                         <p> Ofrece una mejor asistencia hospitalaria mediante donaciones de mascarillas 
                             y aparatos de anestesiología. Durante este periodo pasado de pandemia se estan 
                             derrochando grandes cantidades de mascarillas, ayuda a recaudar fondos para poder 
@@ -44,8 +44,8 @@
                         <h3> Campaña disponible en los hospitales: </h3>
                         <div class="caja_flex">
                             <ul class="colaboraciones">
-                                <li class="a"><a href="#"><img src="resources/images/Hospital_12_oct.jpg" alt="logo hospital 12 de octubre madrid" width="200px"></a></li>
-                                <li class="a"><a href="#"><img src="resources/images/Hospital_La_Paz.JPG" alt="logo hospital la paz madrid" width="200px"></a></li>
+                                <li class="a a1"><a href="#"><img src="resources/images/Hospital_12_oct.jpg" alt="logo hospital 12 de octubre madrid" width="200px"></a></li>
+                                <li class="a a2"><a href="#"><img src="resources/images/Hospital_La_Paz.JPG" alt="logo hospital la paz madrid" width="200px"></a></li>
                             </ul>
                         </div>
                 </div>
@@ -59,7 +59,7 @@
                         <br>
                     </p>
                     <p> 
-                        Dinero recaudado:
+                        <strong> Dinero recaudado: </strong>
                         <?php
                             $query = "SELECT dinero FROM campanas where id = 2";
                             $result = mysqli_query($connection, $query);
@@ -72,7 +72,7 @@
                         €
                     </p>
                     <p> 
-                        Objetivo a recaudar:
+                        <strong> Objetivo a recaudar: </strong>
                         <?php
                             $query = "SELECT objetivo FROM campanas where id = 2";
                             $result = mysqli_query($connection, $query);
@@ -85,7 +85,7 @@
                         €
                     </p>
                     <p> 
-                        Progreso de la recaudacion:
+                        <strong> Progreso de la recaudacion: </strong>
                         <?php
                             $query = "SELECT dinero,objetivo FROM campanas where id = 2";
                             $result = mysqli_query($connection, $query);
@@ -106,8 +106,8 @@
                         %
                     </p> 
                     <div class="radio_button_signup">
-                        <p> Escoge el hospital a donar:  </p>
-                        <label class="rbtn">  Hospital Universidtario de La Paz 
+                        <p> <strong> Escoge el hospital a donar: </strong>  </p>
+                        <label class="rbtn">  Hospital Universitario de La Paz 
                             <input type="radio" checked="checked" name="radio">
                             <span class="checkmark"></span>
                         </label>
@@ -116,20 +116,38 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>  
-                    <p> Introduzca sus datos: </p>
-                    <form method="post">
+                    <p> <strong> Introduzca sus datos:  </strong></p>
+                    <form method="post" id="datos_donacion">
                         <div class="metodos_pago">
-                            <input type="text" name="numero" placeholder="Numero de tarjeta">
-                            <input type="text" name="cvv" placeholder="Numero CVV">
-                            <input type="text" name="mes" placeholder="Mes de caducidad">
-                            <input type="text" name="dia" placeholder="Dia de caducidad">
-                            <input type="text" name="nombre" placeholder="Nombre en la tarjeta">
-                            <input type="text" name="cifra" id="cifra" placeholder="Cantidad a donar" value="<?= isset($_POST['cifra']) ? htmlspecialchars($_POST['cifra']) : '' ?>" onclick="document.getElementById('cifra').value = '';"/>
+                            <div class="text_field"> 
+                                <input type="text" name="numero" placeholder="Numero de tarjeta" style="width : 20vw; heigth : 1px">
+                            </div> 
+                            
+                            <div class="text_field"> 
+                                <input type="text" name="cvv" placeholder="Numero CVV" style="width : 20vw; heigth : 1px">
+                            </div> 
+                            
+                            <div class="text_field"> 
+                                <input type="text" name="mes" placeholder="Mes de caducidad" style="width : 20vw; heigth : 1px">
+                            </div> 
+                            
+                            <div class="text_field"> 
+                                <input type="text" name="dia" placeholder="Dia de caducidad" style="width : 20vw; heigth : 1px">
+                            </div> 
+                            
+                            <div class="text_field"> 
+                                <input type="text" name="nombre" placeholder="Nombre en la tarjeta" style="width : 20vw; heigth : 1px">
+                            </div> 
+                            
+                            <div class="text_field"> 
+                                <input type="text" name="cifra" id="cifra" placeholder="Cantidad a donar" style="width : 20vw; heigth : 1px" value="<?= isset($_POST['cifra']) ? htmlspecialchars($_POST['cifra']) : '' ?>" onclick="document.getElementById('cifra').value = '';"/>
+                            </div> 
                         </div> 
                         <div class="button_container">
-                            <button type="submit" name="donar" id="donar" class="default_btn"> Donar </button>
+                            <button type="submit" name="donar" id="donar" class="default_btn"> Donar  &#8594; </button>
                         </div>
                     </form>
+                        
                     <?php
                     function ingresardinero($connection){
                         $query = "SELECT dinero FROM campanas where id = 2";
@@ -162,6 +180,8 @@
             <div class="push"> </div>
         </div>
         <?php include 'footer.html' ?>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js" crossorigin="anonymous"></script>
         <script type="text/javascript">
             const toggleBtn = document.querySelector('.toggle_button');
 
@@ -169,6 +189,79 @@
 
             toggleBtn.addEventListener('click', function() {
                 navbar_links.classList.toggle('active');
+            });
+
+            $(document).ready(function() {
+                $("#datos_donacion").validate({
+                    rules: {
+                        numero : {
+                            required: true,
+                            minlength: 16,
+                            maxlength: 16
+                        },
+                        cvv : {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 3
+                        },
+                        mes : {
+                            required: true,
+                            minlength: 1,
+                            maxlength: 2
+                        },
+                        dia : {
+                            required: true,
+                            minlength: 1,
+                            maxlength: 2
+                        },
+                        nombre : {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 30
+                        },
+                        cifra : {
+                            required: true,
+                            minlength: 1,
+                            maxlength: 4,
+                            number: true,
+                            max: 1000
+                        }
+                    },
+                    messages: {
+                        numero : {
+                            required: "Introduzca su numero de tarjeta",
+                            minlength: "El numero de tarjeta debe tener 16 digitos",
+                            maxlength: "El numero de tarjeta debe tener 16 digitos"
+                        },
+                        cvv : {
+                            required: "Introduzca su numero CVV",
+                            minlength: "El numero CVV debe tener 3 digitos",
+                            maxlength: "El numero CVV debe tener 3 digitos"
+                        },
+                        mes : {
+                            required: "Introduzca su mes de caducidad",
+                            minlength: "Proporcione un mes de caducidad valido",
+                            maxlength: "Proporcione un mes de caducidad valido"
+                        },
+                        dia : {
+                            required: "Introduzca su dia de caducidad",
+                            minlength: "Proporcione un dia de caducidad valido",
+                            maxlength: "Proporcione un dia de caducidad valido"
+                        },
+                        nombre : {
+                            required: "Introduzca su nombre en la tarjeta",
+                            minlength: "El nombre en la tarjeta debe tener 3 digitos",
+                            maxlength: "El nombre en la tarjeta debe tener 30 digitos"
+                        },
+                        cifra : {
+                            required: "Introduzca la cantidad a donar",
+                            minlength: "La cantidad a donar debe tener 1 digitos",
+                            maxlength: "La cantidad a donar debe tener 4 digitos",
+                            number: "La cantidad a donar debe ser un numero",
+                            max: "La cantidad a donar no puede ser mayor a 1000"
+                        }
+                    }
+                });
             });
         </script>
     </body>
