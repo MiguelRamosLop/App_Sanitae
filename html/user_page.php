@@ -137,7 +137,10 @@
                     </div>
                     <div class="profile_body">
                         <div class="profile_tab">
-                            <h3> @JaviRamos77</h3>
+                            <h3> @<?php 
+                            $username = $_SESSION["username"];
+                            echo $username;
+                            ?></h3>
                             <p> Soy Javier Ramos y tengo 22 años. Me encanta viajar y conocer nuevas culturas, pero mi pasión verdadera es la fotografía y querría dedicarme a ello en el futuro.</p>
                             <p> Siempre he sentido la necesidad de contribuir y he encontrado en Sanitae la mejor forma de hacerlo. Con muy poco se que ayudo mucho y el poder elegir a que hospital se envia mi donación es plus para escoger esta web de crowfundig. Soy del barrio de Tetuán y poder ayudar al hospital La Paz (el más importante de mi barrio) me llena de orgullo propio.</p>
                         </div>
@@ -149,11 +152,14 @@
                                     $query = "SELECT cantidad,objeto,usuario FROM donaciones WHERE usuario = '$username'";
                                     $result = mysqli_query($connection, $query);
 
+                                    $query2 = "SELECT cantidad,objeto FROM donaciones LIMIT 1";
+                                    $result2 = mysqli_query($connection, $query2);
+
                                     if($result->num_rows>0){
                                             $count = '1';
                                             $row2 = $result2->fetch_assoc();
                                         ?>
-                                           <table class=""> 
+                                           <table class="">
                                             <tr>
                                             <td>Donacion</td>
                                             <td>Usuario</td>
@@ -163,6 +169,8 @@
                                         <?php
                                         while($row = $result->fetch_assoc()){
                                            ?>
+
+
                                                 <tr>
                                                 <td>#<?php echo $count; ?></td>
                                                 <td><?php echo $row["usuario"]; ?></td>
@@ -180,7 +188,7 @@
                             //$row["ID"]
                                     }
                                     else{
-                                        echo "Este usuario no ha realizado aun ninguna donación";
+                                        echo "Este usuario no ha realizado ninguna donacion";
                                     }
                                 ?>
                             </p>  
