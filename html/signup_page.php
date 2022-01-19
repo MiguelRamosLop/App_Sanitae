@@ -40,18 +40,6 @@
                     <div class="text_field">
                         <input type="text" name="nif" placeholder="NIF">
                     </div>
-                    <div class="radio_button_signup">
-                        <p> <strong> Tipo de usuario: </strong> </p>
-                        <label class="rbtn"> <strong> Particular </strong> 
-                            <input type="radio" checked="checked" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="rbtn"> <strong> Empresa </strong>
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <br>
-                    </div>
                     <div class="text_field">
                         <button type="submit" name="register" class="default_btn"> Registrarme &#8594; </button>
                     </div>

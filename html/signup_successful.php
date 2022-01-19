@@ -10,7 +10,7 @@
             $telefono = $_POST["telefono"];
             $contrasena = $_POST["contrasena"];
             $nif = $_POST["nif"];
-            $tipo_usuario = $_POST["radio"];
+            $sobremi = "No he escrito nada todavia";
 
             function find_user_by_username($username,  $connection) {
 
@@ -52,12 +52,10 @@
                 
             else {
                         //Encriptar password
-                        $pass_s = password_hash($contrasena, PASSWORD_DEFAULT);
-                        echo("$pass_s");
                         $query  = "INSERT INTO datos (";
-                        $query .= "  `nombre`, `apellido`,`username`, `telefono`,`contrasena`,`nif`,`tipo_usuario`";
+                        $query .= "  `nombre`, `apellido`,`username`, `telefono`,`contrasena`,`nif`,`sobremi`";
                         $query .= ") VALUES (";
-                        $query .= " '$nombre', '$apellidos', '$username', '$telefono', '$pass_s', '$nif', '$tipo_usuario' ";
+                        $query .= " '$nombre', '$apellidos', '$username', '$telefono', '$contrasena', '$nif', '$sobremi' ";
                         $query .= ")";
                 
                         $result = mysqli_query($connection, $query);

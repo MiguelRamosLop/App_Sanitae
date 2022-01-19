@@ -11,6 +11,33 @@
     <div class="navbar_links">
         <ul>
             <li>
+                    <?php
+                    if(isset($_POST['username'])){
+                        $_SESSION['username'] = $_POST['username'];
+                        $username = $_SESSION['username'];
+                        if($username == 'admin') {
+                        ?>
+                    <a href="admin.php"><img src="resources/images/settings.jpg" alt="user" width="25" height="25"></a></li>
+                    <?php } ?>
+                <li>
+                    <?php
+                    } else {
+                        if(isset($_SESSION['username'])){ 
+                            $username = $_SESSION['username'];
+                            if($username == 'admin') {
+                            ?>
+                            <a href="admin.php"><img src="resources/images/settings.jpg" alt="user" width="25" height="25"></a></li>
+                            <?php } ?>
+                            <li>
+                        <?php
+                        } else { ?>
+                        <a href="../html/login_page.php">  </a>
+                <?php     }
+                    } ?>
+                    
+                
+            </li>
+            <li>
                 <a href="../html/home_page.php"> Inicio </a>
             </li>
             <li>
@@ -40,7 +67,7 @@
                     } ?>
                     
                 
-                </li>
+            </li>
             </ul>
     </div>
 </nav>

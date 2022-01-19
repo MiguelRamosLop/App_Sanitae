@@ -1,8 +1,15 @@
 <?php
 	session_start();
+	include('conexion_bbdd.php');
 
-$contra = $_POST["contrasena2"];
-$contra2 = $_POST["repite_password2"];
-echo $contra;
-echo $contra2;
+	$texto = $_POST["comentarios"];
+	$username = $_SESSION['username'];
+
+	$query = "UPDATE datos set sobremi = '$texto' where username = '$username'";
+    $result = mysqli_query($connection, $query);
+	
+	header("Location: " . "user_page.php");
+
+
+
 ?>

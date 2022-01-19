@@ -136,16 +136,32 @@
                         </ul>
                     </div>
                     <div class="profile_body">
-                        <div class="profile_tab">
+                    <div class="profile_tab">
+                    
                             <h3> @<?php 
                             $username = $_SESSION["username"];
                             echo $username;
                             ?></h3>
-                            <p> Soy Javier Ramos y tengo 22 años. Me encanta viajar y conocer nuevas culturas, pero mi pasión verdadera es la fotografía y querría dedicarme a ello en el futuro.</p>
-                            <p> Siempre he sentido la necesidad de contribuir y he encontrado en Sanitae la mejor forma de hacerlo. Con muy poco se que ayudo mucho y el poder elegir a que hospital se envia mi donación es plus para escoger esta web de crowfundig. Soy del barrio de Tetuán y poder ayudar al hospital La Paz (el más importante de mi barrio) me llena de orgullo propio.</p>
-                        </div>
+                            <p>Aqui muestras un pequeño texto hablando sobre ti, se inicializa tras el registro, puede ser configurado haciendo click en la pestaña de "Settings"</p>
+                            <p>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                            <p>
+                                <?php
+                                    if(isset($_SESSION['username'])){
+                                        $username = $_SESSION['username'];
+                                        $query = "SELECT sobremi FROM datos where username = '$username'" ;
+                                        $result = mysqli_query($connection, $query);
+                                        if ($result->num_rows > 0) {
+                                            while($row = $result->fetch_assoc()) {
+                                                echo $row["sobremi"];
+                                            }
+                                        }
+                                    }
+                                ?>
+                            </p>
+                            </div>
                         <div class="profile_tab">
                             <h3> Últimas donaciones</h3>
+                            <p>Este apartado muestra las ultimas donaciones realizadas por este usuario, mostrando datos importantes como la cantidad y la campaña a la que fue donado</p>
                             <p> 
                                 <?php
                                     $username = $_SESSION["username"];
@@ -193,7 +209,16 @@
                         </div>
                         <div class="profile_tab">
                            <h3> Ajustes de la cuenta...</h3> 
-                           <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae vel sed laudantium ipsa tenetur voluptates incidunt. Qui mollitia omnis sunt sit iure, neque doloremque eum in corporis deserunt facere necessitatibus?</p>
+                           <p>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                           <h3>Establece un mensaje sobre ti</h3>
+                           <p>
+                                <form method="post" action="modificardatos.php" id="basic-form">
+                                    <textarea name="comentarios" rows="3" cols="40">Escribe aqui tus comentarios</textarea>
+                                    <button type="submit" name="register" class="default_btn"> Actualizar &#8594; </button>
+                                </form>
+                           </p>
+                           <p>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                           <h3>Actualiza tu contraseña</h3>
                         </div>
                     </div>
                 </div>
