@@ -2,6 +2,10 @@
 	session_start();
 
 ?>
+<?php
+    include('conexion_bbdd.php');
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,9 +33,35 @@
                         precio de los aparatos de anestesiología resulta muy complejo para algunos hospitales
                         publicos poder acceder a ellos.<br>
                         <strong> Con Sanitae ayudas mucho, con muy poco. </strong>
+                        <p> 
+                        <strong> Progreso: </strong>
+                        <?php
+                            $query = "SELECT dinero FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo $row["dinero"];
+                                    }
+                                }
+                        ?>
+                        €
+                        </p>
+                        <p> 
+                        <strong> Objetivo: </strong>
+                        <?php
+                            $query = "SELECT objetivo FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo $row["objetivo"];
+                                    }
+                                }
+                        ?>
+                        €
+                        </p>
                     </p>
                     <div class="card_footer">
-                        <a class="info" href="#"> Más información</a>
+                        <a class="info" href="../html/terminos&condiciones.php"> Más información</a>
                         <button class='button_donar' onclick="window.location.href='../html/donations_page.php'">  Donar </button>
                         <img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg" width="30">
                         <img class="rounded-circle" src="../html/resources/images/profile_photo.JPG" width="30">
@@ -47,9 +77,23 @@
                         son considerados instrumentos médicos básicos y una pieza estándar dentro 
                         del mundo hospitalario por lo que las donaciones siempre ayudan. <br>
                         <strong> Con Sanitae ayudas mucho, con muy poco. </strong>
+                        <p> <strong> Progreso: </strong> 900 € </p>
+                        <p> 
+                        <strong> Objetivo: </strong>
+                        <?php
+                            $query = "SELECT objetivo FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo $row["objetivo"];
+                                    }
+                                }
+                        ?>
+                        €
+                        </p>
                     </p>
                     <div class="card_footer">
-                        <a class="info" href="#"> Más información</a>
+                        <a class="info" href="../html/terminos&condiciones.php"> Más información</a>
                         <button class='button_donar'>  Donar </button>
                         <img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg" width="30">
                         <img class="rounded-circle" src="../html/resources/images/profile_photo.JPG" width="30">
@@ -65,8 +109,22 @@
                         con este objetivo siempre es bienvenida. <br>
                         <strong> Con Sanitae ayudas mucho, con muy poco. </strong>
                     </p>
+                    <p> <strong> Progreso: </strong> 720 € </p>
+                    <p> 
+                        <strong> Objetivo: </strong>
+                        <?php
+                            $query = "SELECT objetivo FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo $row["objetivo"];
+                                    }
+                                }
+                        ?>
+                        €
+                    </p>
                     <div class="card_footer">
-                        <a class="info" href="#"> Más información</a>
+                        <a class="info" href="../html/terminos&condiciones.php"> Más información</a>
                         <button class='button_donar'>  Donar </button>
                         <img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg" width="30">
                         <img class="rounded-circle" src="../html/resources/images/profile_photo.JPG" width="30">
@@ -78,11 +136,26 @@
                     <img class="product" src="../html/resources/images/investigacion.JPG"  alt="microoscopio">
                     <p> Contrubuye a mejorar en nivel de investigación en los hospitales madrileños 
                         mediante la donación de diversos materiales como microoscopios con el fin de poder
-                        conseguir que existan cuantas más facilidades posibles para la adecuada atención medica.<br>
+                        conseguir que existan cuantas más facilidades posibles para la adecuada atención medica.
+                        Hoy en día se hace vital poder contar con lo último en tecnología. <br>
                         <strong> Con Sanitae ayudas mucho, con muy poco. </strong>
                     </p>
+                    <p> <strong> Progreso: </strong> 500 € </p>
+                    <p> 
+                        <strong> Objetivo: </strong>
+                        <?php
+                            $query = "SELECT objetivo FROM campanas where id = 2";
+                            $result = mysqli_query($connection, $query);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo $row["objetivo"];
+                                    }
+                                }
+                        ?>
+                        €
+                    </p>
                     <div class="card_footer">
-                        <a class="info" href="#"> Más información</a>
+                        <a class="info" href="../html/terminos&condiciones.php"> Más información </a>
                         <button class='button_donar'>  Donar </button>
                         <img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg" width="30">
                         <img class="rounded-circle" src="../html/resources/images/profile_photo.JPG" width="30">
