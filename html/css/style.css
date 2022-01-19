@@ -1139,3 +1139,12 @@ button.chat_btn:hover {
     border: 3px transparent solid;
     padding: 2px;
 }
+
+.estructura {
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin-left: 10vw;
+}

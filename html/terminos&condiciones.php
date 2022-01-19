@@ -61,6 +61,10 @@
                     o de telecomunicaciones.
                 </p>
             </div>
+            <div class="center_terms">
+                <h2> Estructura del sitio </h2> <br>
+                <img class= "estructura" src="../html/resources/designs/Arquitectura_web.png" alt="arquitectura del sitio">
+            </div>
             <div class="push"> </div>
         </div>
         <?php include 'footer.html' ?>

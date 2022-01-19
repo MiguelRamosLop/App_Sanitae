@@ -29,7 +29,7 @@
                 <p class="top_text"> Sanitae </p>
                 <p class="medium_text"> Con Sanitae ayudas mucho, con muy poco. </p>
                 <p class="small_text">
-                    Sanitae es una empresa de crowfunding que permite que cualquier persona 
+                    Sanitae es una empresa de crowdfunding que permite que cualquier persona 
                     pueda aportar su grano de arena al sector sanitario realizando donaciones voluntarias 
                     que supondrán una mejora en el material sanitario de los hospitales públicos madrileños
                     más salpicados por estos momentos de escasez.
