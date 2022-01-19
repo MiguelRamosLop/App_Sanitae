@@ -143,7 +143,47 @@
                         </div>
                         <div class="profile_tab">
                             <h3> Últimas donaciones</h3>
-                            <p> Aquí se indican las últimas donaciones de @JaviRamos77 con todos los datos completos como el método de transferencia o la propia contribución realizada al hospital correspondiente.  </p>  
+                            <p> 
+                                <?php
+                                    $username = $_SESSION["username"];
+                                    $query = "SELECT cantidad,objeto,usuario FROM donaciones WHERE usuario = '$username'";
+                                    $result = mysqli_query($connection, $query);
+
+                                    if($result->num_rows>0){
+                                            $count = '1';
+                                            $row2 = $result2->fetch_assoc();
+                                        ?>
+                                           <table class=""> 
+                                            <tr>
+                                            <td>Donacion</td>
+                                            <td>Usuario</td>
+                                            <td>Cantidad</td>
+                                            <td>Objeto</td>
+                                            </tr>
+                                        <?php
+                                        while($row = $result->fetch_assoc()){
+                                           ?>
+                                                <tr>
+                                                <td>#<?php echo $count; ?></td>
+                                                <td><?php echo $row["usuario"]; ?></td>
+                                                <td><?php echo $row["cantidad"]; ?></td>
+                                                <td><?php echo $row["objeto"]; ?></td>
+                                                </tr>
+
+                                            <?php
+                                            //echo "Donacion: #".$count."              Usuario: ".$username."<br>";
+                                            $count++;
+                                        }
+                                        ?>
+                                        </table> 
+                                        <?php
+                            //$row["ID"]
+                                    }
+                                    else{
+                                        echo "Este usuario no ha realizado aun ninguna donación";
+                                    }
+                                ?>
+                            </p>  
                         </div>
                         <div class="profile_tab">
                            <h3> Ajustes de la cuenta...</h3> 

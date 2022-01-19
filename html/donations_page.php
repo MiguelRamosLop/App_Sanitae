@@ -1,7 +1,9 @@
 <?php
 	session_start();
 
-    if(isset($_SESSION['username'])){}
+    if(isset($_SESSION['username'])){
+        
+    }
     else{header("Location: " . "login_page.php");}
     if(array_key_exists('donar',$_POST)){
         header("Location: " . "donations_page.php");
@@ -169,7 +171,10 @@
                         } else {
                             die("Database query failed. " . mysqli_error($connection));
                         }
-                        
+                        $username = $_SESSION["username"];
+                        $query3 = "INSERT INTO donaciones (cantidad, usuario, objeto) VALUES ('$cifra', '$username', 'Mascarillas y lamparas quirurgicas')";
+                        $result3 = mysqli_query($connection, $query3);
+
                     }
                     if(array_key_exists('donar',$_POST)){
                     ingresardinero($connection);
