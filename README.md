@@ -8,7 +8,7 @@ Realización de una website de crowfunding llamada Sanitae que permite hacer don
 
 ## Arquitectura del sitio
 
-![web_design](https://user-images.githubusercontent.com/71699683/148822005-bcab4b77-becb-4213-9148-c1acd7cfc3eb.png)
+![Arquitectura_web](https://user-images.githubusercontent.com/71699683/150107404-bb0ba75b-ac80-4f50-8071-062c48694990.png)
 
 ## Contributors
 
