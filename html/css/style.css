@@ -778,6 +778,11 @@ input.error, textarea.error {
     padding-left: 1vw;
 }
 
+.a1, .a2 {
+    width: fit-content;
+    height: fit-content;
+}
+
 .colaboraciones a {
     text-decoration: none;
     padding-right: 5vw;

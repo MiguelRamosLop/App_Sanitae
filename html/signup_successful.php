@@ -37,15 +37,10 @@
                     function attempt_login($username, $connection) {
                         $user = find_user_by_username($username, $connection);
                         if ($user) {
-                            
-                            //user encontrado
-                            
                             return $user;
                     }
                             
                          else {
-                            // user not found
-                            //echo "Usuario no encontrado";
                             return false;
                         }
                     }
@@ -57,11 +52,12 @@
                         
                     else {
                                 //Encriptar password
-                                //$pass_s = password_hash($password, PASSWORD_DEFAULT);
+                                $pass_s = password_hash($contrasena, PASSWORD_DEFAULT);
+                                echo("$pass_s");
                                 $query  = "INSERT INTO datos (";
                                 $query .= "  `nombre`, `apellido`,`username`, `telefono`,`contrasena`,`nif`,`tipo_usuario`";
                                 $query .= ") VALUES (";
-                                $query .= " '$nombre', '$apellidos', '$username', '$telefono', '$contrasena', '$nif', '$tipo_usuario' ";
+                                $query .= " '$nombre', '$apellidos', '$username', '$telefono', '$pass_s', '$nif', '$tipo_usuario' ";
                                 $query .= ")";
                         
                                 $result = mysqli_query($connection, $query);
