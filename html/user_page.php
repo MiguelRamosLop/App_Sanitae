@@ -159,24 +159,22 @@
                                             $count = '1';
                                             $row2 = $result2->fetch_assoc();
                                         ?>
-                                           <table class="">
+                                        <table class="table">
                                             <tr>
-                                            <td>Donacion</td>
-                                            <td>Usuario</td>
-                                            <td>Cantidad</td>
-                                            <td>Objeto</td>
+                                                <th> <strong> Donacion    </strong></th>
+                                                <th> <strong> Usuario     </strong></th>
+                                                <th> <strong> Cantidad    </strong></th>
+                                                <th> <strong> Campaña     </strong></th>
                                             </tr>
                                         <?php
                                         while($row = $result->fetch_assoc()){
-                                           ?>
-
-
-                                                <tr>
+                                        ?>
+                                            <tr>
                                                 <td>#<?php echo $count; ?></td>
                                                 <td><?php echo $row["usuario"]; ?></td>
                                                 <td><?php echo $row["cantidad"]; ?></td>
                                                 <td><?php echo $row["objeto"]; ?></td>
-                                                </tr>
+                                            </tr>
 
                                             <?php
                                             //echo "Donacion: #".$count."              Usuario: ".$username."<br>";
